@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="./assets/css/admin-dashboard.css">
+  <style>
+    /* Additional styles for the car list and remove button */
+    .car-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .car-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    .car-image {
+      width: 100px;
+      height: auto;
+      margin-right: 10px;
+    }
+    
+    .car-details {
+      margin-right: 20px;
+    }
+    
+    .remove-car-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    
+    .remove-car-btn:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-wrapper">
+    <h2>Add New Featured Car</h2>
+    <form id="admin-form">
+      <div class="input-box">
+        <input type="text" id="car-name" placeholder="Car Name" required>
+      </div>
+      <div class="input-box">
+        <input type="number" id="car-year" placeholder="Year" required>
+      </div>
+      <div class="input-box">
+        <input type="file" id="car-image" accept="image/*" required>
+      </div>
+      <div class="image-preview">
+        <img id="image-preview" style="display: none; width: 100px; height: auto; margin-top: 10px;" />
+      </div>
+      <div class="input-box">
+        <input type="text" id="car-people" placeholder="Capacity" required>
+      </div>
+      <div class="input-box">
+        <input type="text" id="car-fuel" placeholder="Fuel Type" required>
+      </div>
+      <div class="input-box">
+        <input type="text" id="car-mileage" placeholder="Mileage" required>
+      </div>
+      <div class="input-box">
+        <input type="text" id="car-transmission" placeholder="Transmission" required>
+      </div>
+      <div class="input-box">
+        <input type="number" id="car-price" placeholder="Price per Day" required>
+      </div>
+      <div class="input-box button">
+        <input type="submit" value="Add Car">
+      </div>
+    </form>
+
+    <h2>Remove Car</h2>
+    <form id="remove-car-form">
+      <div id="car-list-container" class="input-box">
+        <!-- List of cars will be dynamically inserted here -->
+      </div>
+    </form>
+  </div>
+
+  <script src="./assets/js/admin-dashboard.js"></script>
+</body>
+</html>
